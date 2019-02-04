@@ -2,140 +2,255 @@
 <!--
 	Name: Cody Czora
 	Date Created: 1/23/2019
-	Most recent revision: 1/28/2019
+	Most recent revision: 2/3/2019
 -->
 <html lang="en">
 	<head>
-		<title>Contact Us</title>
+		
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 		
-		<style>
-			<!-- form styling -->	
-			
-			input[type=select] {
-				height: 20px;
-			}
-			
-			textarea {
-				height: 150px;
-				width: 80%;
-			}
-			 
-			input[type=submit] {
-				display: block;
-				font-size: 1.2em;
-				background-color: #af1b3f;
-				color: #efe4d7;
-				padding: 4px 8px;
-				margin: 0 auto;
-			}
-			
-			input[type=submit]:hover {
-				background-color: #efe4d7;
-				color: #14090b;
-				font-weight: bold;
-			}	
-			
-			input[type=submit]:active {
-				font-weight: normal;
-			}	
-			
-			input[type=text] {
-				border: 1px solid #14090b;
-				width: 80%;
-				padding: 8px 8px;
-				margin: 8px 0px;
-				box-sizing: border-box;
-				font-size: 1.1em;
-			}
- 
-			text, select, textarea, radio, checkbox {
-				margin-bottom:10px;
-				width: 100%;
-			}
-
-			.required label{
-				font-weight: bold;
-			}
-			 
-			 form {
-				display: inline-block;
-				margin-left: auto;
-				margin-right: auto;
-				text-align: left;
-				width: 50%;
-			}
+		<!--substituted Font Awesome in place of Glyphicons since they were dropped in bootstrap 4-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		
-		</style>
+		<title>Contact Us</title>
+		
+		<style>
+		label.required {
+			color: red;
+		}
+	
+		h2 {
+			text-align: center;
+		}
+		
+		.btn {
+			background-color: #af1b3f;
+			text-color: #14090b;
+		}
+		
+		.btn:hover {
+			background-color: white;
+			color: #af1b3f;
+		}
+	</style>
+	
 	</head>
 
 		<body>
-			<header>
-				<h1>Pica's Place<h1>
-			</header>
-			
-			<nav>
-			<div class="clearfix">
-				<p><a href="index.html">Home</a></p>
-				<p><a href="menu.html">Menu</a></p>	
-				<p><a href="contact.html">Contact Us</a></p>
+		
+			<div class = "container-fluid">
+				<header>
+					<h1>Pica's Place<h1>
+				</header>
 			</div>
+			
+			<noscript>
+				<p style="color:blue;">Your web browser has JavaScript disabled or does not support JavaScript.
+				Our site is best viewed with JavaScript enabled.
+				</p>
+			</noscript>
+			
+			
+			<nav class="nav nav-pills nav-fill">
+			
+				<a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i></a>
+					
+				<a class="nav-item nav-link" href="menu.html">Menu</a>
+					
+				<a class="nav-item nav-link" href="contact.html">Contact Us</a>
+
 			</nav>
 			
-			<form action="submit.html" method="POST">
-				
-				<div class="required">
-				<label for="name">Name:</label>
-					<input type="text" id="name" name="name" required> <br />
-				
-				<label for="email">Email:</label>
-					<input type="text" id="email" name="email" required> <br />
-				
-				<label for="phone">Phone:</label>
-					<input type="text" id="phone" name="phone" required> <br />
-				</div>	
-					
+			<div class="container-fluid">
+				<div class="page-header">
+					<h2>New Year, New Location</h2>
+					<h5>Carlsbad location opening Summer 2019!</h5>
+				</div>
+			</div>
 			
-				<label for="reason">Reason for Inquiry:</label>
-					<select for="reason" id="reason" name="reason">
-					<option value="default" selected>Catering</option>
-					<option value="private-party">Private Party</option>
-					<option value="feedback" >Feedback</option>
-					<option value="other">Other</option>
-					</select>
-				
-				<br />
-				
-				<label for="info">Additional Information:</label>
-					<textarea id="info" name="info"></textarea>
-				
-				<fieldset class="clearfix">
-					<label for="visited">Have you been to the restaurant?</label>
-						<input type="radio" id="no" name="visited" value="no" checked>
-						<label for="no">No</label>
-						<input type="radio" id="yes" name="visited" value="yes">
-						<label for="yes">Yes</label>	
-				</fieldset>	
+			<div class="container-fluid">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
 
-				
-				<fieldset class="clearfix">
-					<label for="contact-days">Best days to contact you:</label>
-						<input type="checkbox" name="day-choice" value="mon" >M</input>
-						<input type="checkbox" name="day-choice" value="tues">T</input>
-						<input type="checkbox" name="day-choice" value="weds">W</input>
-						<input type="checkbox" name="day-choice" value="thurs">Th</input>	
-						<input type="checkbox" name="day-choice" value="fri">F</input>
-				</fieldset>
-				
-				<input type="submit" name="submit" value="Send Request" />
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+					<div class="parent d-flex justify-content-center">
+						<img class="first-slide img-fluid" src="Images/bar.jpg" alt="Bar Interior">
+						<div class="carousel-caption">
+							<h3>New Location</h3>
+							<p>Opening July 1st, 2019 at the Carlsbad beachfront!</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="second-slide img-fluid" src="Images/menu-slate.jpg" alt="Chalkboard">
+						<div class="carousel-caption">
+							<h3>Spring Specials</h3>
+							<p>Our menu has been updated to reflect the season</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="third-slide img-fluid" src="Images/beer.jpg" alt="Beer">
+						<div class="carousel-caption">
+						
+							<h3>On Tap</h3>
+							<p>Our Beer of the Month is SG Special Brew</p>
+							
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
 			
-			</form>
+			<h2>Contact Us</h2>
 			
-			<footer>
-				<p>4870 Ashcraft Court, San Diego, CA 92103</p>
-				<p>(619) 360-0587</p>
-			</footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-7">
+					
+						<form name="contactUs" action="#" method="POST" class="form-horizontal">
+						<!--will not be submitted until the # is replaced-->
+						
+								<div class="form-group row">
+								
+									<label for="name" class="col-md-3 col-form-label required">Name:</label>
+									
+									<div class="col-md-9">
+										<input type="text" class="form-control" id="name" placeholder="Your Name" required>
+									</div>
+									
+								</div>
+
+								<div class="form-group row">
+								
+									<label for="exampleInputEmail1" class="col-md-3 col-form-label required">Email address:</label>
+									
+									<div class="col-md-9">
+										<input type="email" class="form-control" id="email" placeholder="me@example.com" required>
+									</div>
+									
+								</div>
+
+								<div class="form-group row">
+								
+									<label for="phone" class="col-md-3 col-form-label required ">Phone:</label>
+									<div class="col-md-9">
+										<input type="number" class="form-control" id="phone" placeholder="555-123-4567" required>
+									</div>	
+									
+								</div>
+
+								<div class="form-group row">
+								
+									<label for="reason" class="col-md-3 col-form-label">Reason for Inquiry:</label>
+										<div class="col-md-9">
+											<select class="form-control" id="reason">
+											<option value="default" selected>Catering</option>
+											<option value="private-party">Private Party</option>
+											<option value="feedback" >Feedback</option>
+											<option value="other">Other</option>
+											</select>
+										</div>
+										
+								</div>
+
+								
+								<div class="form-group row">
+								
+									<label for="info" class="col-md-3 col-form-label">Additional Info:</label>
+										<div class="col-md-9">
+											<textarea id="info" class="form-control" placeholder="Optional"></textarea>
+										</div>
+										
+								</div>
+
+								<div class="form-group row">
+								
+									<legend class="col-md-8 col-form-label">Have you been to the restaurant?</legend>
+										<div class="col-md-4">
+											<div class="form-check-inline">
+												<input type="radio" id="no" class="form-check-input" value="no" checked>
+												<label class="form-check-radio" for="no">No</label>
+											</div>
+											<div class="form-check-inline">
+												<input type="radio" id="yes" class="form-check-input" value="yes">
+												<label class="form-check-radio" for="yes">Yes</label>
+											</div>
+										</div>
+								
+								</div>
+	
+								<div class="form-group">
+									<label for="contact-days">Best days to contact you:</label>
+										<div class="form-check form-check-inline">
+											<input type="checkbox" class="form-check-input" id="Mon" value="Mon">
+											<label class="form-check-label" for="Mon">Monday</label>
+											<input type="checkbox" class="form-check-input" id="Tues" value="Tues">
+											<label class="form-check-label" for="Tues">Tuesday</label>
+											<input type="checkbox" class="form-check-input" id="Weds" value="Weds">
+											<label class="form-check-label" for="Weds">Wednesday</label>
+											<input type="checkbox" class="form-check-input" id="Thurs" value="Thurs">
+											<label class="form-check-label" for="Thurs">Thursday</label>
+											<input type="checkbox" class="form-check-input" id="Fri" value="Fri">
+											<label class="form-check-label" for="Fri">Friday</label>
+										</div>
+								</div>
+
+								<!--Nested div to offset the button to the middle of the form-->
+								<div class="col-md-12">
+									<button id="submit" type="submit" name="submit" value="submit"
+									class="btn btn-primary border border-0 col-md-3 offset-md-4" onclick="return validateForm();">
+									<i class="far fa-hand-point-right"></i> Submit</button>								
+								</div>
+
+							
+						
+						</form>
+					</div>
+					
+					<div class="col-5">
+						<h2>Hours</h2>
+						<ul>
+							<li><strong>Monday: </strong> 10:00am-7:00pm</li>
+							<li><strong>Tuesday: </strong> 10:00am-7:00pm</li>
+							<li><strong>Wednesday: </strong> 10:00am-7:00pm</li>
+							<li><strong>Thursday: </strong> 10:00am-7:00pm</li>
+							<li><strong>Friday: </strong> 10:00am-12:00pm</li>
+							<li><strong>Saturday: </strong> 10:00am-11:00pm</li>
+							<li><strong>Sunday: Closed</strong></li>
+						</ul>
+					</div>
+					
+					
+				</div>
+			</div>
 			
+			<div class="container-fluid">
+				<footer>
+					<p>4870 Ashcraft Court, San Diego, CA 92103</p>
+					<p>(619) 360-0587</p>
+				</footer>
+			</div>
+			
+		<!--JavaScript scripts-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		</body>
 <html>	

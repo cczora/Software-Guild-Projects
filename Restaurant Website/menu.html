@@ -2,188 +2,239 @@
 <!--
 	Name: Cody Czora
 	Date Created: 1/23/2019
-	Most recent revision: 1/28/2019
+	Most recent revision: 2/3/2019
 -->
 <html lang="en">
 	<head>
-		<title>Menu</title>
+	
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 		
-		<style>
-		<!-- table styling -->
-			thead {
-				font-weight: bold;
-				font-size: 1.2em;
-				margin-bottom: 8px;
-				height: 30px;
-				}
-				
-			tbody {
-				text-align: center;
-				text-decoration: none;
-				padding: 0px;
-				}
-				
-			.food {
-				margin: auto;
-				width: 100%;
-			}
-			
-			.beverage {
-				margin:auto;
-				width: 70%;
-				padding-bottom: 10px;
-			}
-			
-			 
-		<!-- body styling -->
-			nav, section {
-				background-color: #a04b4b;
-				}
-				
-			th {
-				font-size: 1.1em;
-				text-align: center;
-				}
+		<!--substituted Font Awesome in place of Glyphicons since they were dropped in bootstrap 4-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		
+		<title>Menu</title>
+		
+		<style>	
+			.col-md-4 {
+				padding-right: 15px;
+				text-align:center;
+			}
+
+			span.seasonal {
+				background-color: #FFFFFF;
+				font-family: "Dosis", sans-serif;
+				text-transform: uppercase;
+				font-size: small;
+				vertical-align: middle;
+				padding: 0px 2px 0px 2px;
+			}
+			
 		</style>
+		
 	</head>
 
 		<body>
-			<header>
-				<h1>Pica's Place<h1>
-			</header>
-			
-			<nav>
-			<div class="clearfix">
-				<p><a href="index.html">Home</a></p>
-				<p><a href="menu.html">Menu</a></p>	
-				<p><a href="contact.html">Contact Us</a></p>
+		
+			<div class = "container-fluid">
+				<header>
+					<h1>Pica's Place<h1>
+				</header>
 			</div>
+			
+			<noscript>
+				<p style="color:blue;">Your web browser has JavaScript disabled or does not support JavaScript.
+				Our site is best viewed with JavaScript enabled.
+				</p>
+			</noscript>
+			
+			<nav class="nav nav-pills nav-fill">
+			
+				<a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i></a>
+					
+				<a class="nav-item nav-link" href="menu.html">Menu</a>
+					
+				<a class="nav-item nav-link" href="contact.html">Contact Us</a>
+
 			</nav>
 			
-			<section>
-					<article>
-						<table class="food">
+			<div class="container-fluid">
+				<div class="page-header">
+					<h2>New Year, New Location</h2>
+					<h5>Carlsbad location opening Summer 2019!</h5>
+				</div>
+			</div>
+			
+			<div class="container-fluid">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+					<div class="parent d-flex justify-content-center">
+						<img class="first-slide img-fluid" src="Images/bar.jpg" alt="Bar Interior">
+						<div class="carousel-caption">
+							<h3>New Location</h3>
+							<p>Opening July 1st, 2019 at the Carlsbad beachfront!</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="second-slide img-fluid" src="Images/menu-slate.jpg" alt="Chalkboard">
+						<div class="carousel-caption">
+							<h3>Spring Specials</h3>
+							<p>Our menu has been updated to reflect the season</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="third-slide img-fluid" src="Images/beer.jpg" alt="Beer">
+						<div class="carousel-caption">
 						
+							<h3>On Tap</h3>
+							<p>Our Beer of the Month is SG Special Brew</p>
+							
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 leftSide">
+					<h2>American Classics</h2>
+				
+					<h4>Burger and Fries</h4>
+					<p>Your choice - with or without cheese,
+					pickle, onion, tomato, and lettuce.
+					Served with our famous thick cut french fries</p>
+					<h5>$7.95</h5>	
+
+					<h4>Hot Dog and Chips</h4>
+					<p>On a white or wheat bun with
+					Relish, mustard, and ketchup.
+					Served with our house-made chips</p>
+					<h5>$7.95</h5>	
+			
+				</div>
+				
+				<div class="col-md-4 middle">
+				
+					<h2>Meat and Veggies</h2>
+					
+					<h4>Tenderloin Sandwich and Chips</h4>
+					<p>On a plain or sesame seed bun with
+					pickle, onion, tomato, and lettuce.
+					Served with our house-made chips</p>
+					<h5>$8.95</h5>
+			
+					<h4>House Salad</h4>
+					<p>Iceberg lettuce, tomatoes, and peppers
+					with Thousand Island or Ranch dressing.
+					Served with a dinner roll and optional cheese on top</p>
+					<h5>$6.95</h5>
+	
+				</div>
+				
+				<div class="col-md-4 rightSide">
+					<h2>The Smokehouse</h2>
+					
+					<h4>Italian Sausage and Peppers</h4>
+					<p>Your choice of mild or spicy slaw
+					served with garlic mashers</p>
+					<h5>$10.95</h5>
+					
+					<h4>Brisket Sandwich and Fries</h4>
+					<p>Smoked Brisket on thick-cut Texas Toast
+					Served with our famous thick-cut french fries and cole slaw</p>
+					<h5>$7.95</h5>
+					
+				</div>
+			</div>
+			
+			<div class="mx-auto" style="width:200px">
+				<h2>Desserts</h2>
+			</div>
+			
+			
+			<div class="row">			
+				<div class="col-md-4">
+					<h4>Sundae Supreme</h4>
+					<p>Hot fudge, whipped cream, walnuts, and a cherry all on top of vanilla ice cream</p>
+					<h5>$5.95</h5>
+				</div>	
+				
+				<div class="col-md-4">
+					<h4>New York Cheesecake</h4>
+					<p>Luscious cheesecake with fresh berries on top</p>
+					<h5>$6.50</h5>
+				</div>
+					
+				<div class="col-md-4">
+					<h4>Cherry Blossom Cake<span class="seasonal">SEASONAL</span></h4>
+					<p>A slice of cherry cake covered with our special cherry glaze 
+					and served with a side of whipped cream</p>
+					<h5>$6.95</h5>				
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="Col-md-7 offset-5">
+					<table class="table-responsive table-striped">
 						<thead>
 							<tr>
-								<th>Burger and Fries</th>
-								<th>Hot Dog and Chips</th>
-								<th>Italian Sausage and Peppers</th>
-							<tr>	
+								<h2>Beverages</h2>
+							</tr>
 						</thead>
-						
 						<tbody>
 							<tr>
-								<td>
-									<p>An American Classic!</p>
-									<p>Your choice - with or without cheese
-									pickle, onion, tomato, and lettuce</p>
-									<p>Served with our famous thick cut french fries</p>
-									<p>$7.95</p>
-								</td>
-						
-								<td>
-									<p>A Summer Classic!</p>
-									<p>Your choice - white or wheat bun
-									Relish, mustard, and ketchup</p>
-									<p>Served with our house-made chips</p>
-									<p>$7.95</p>
-
-								</td>
-					
-								<td>	
-									<p>An All-Time Favorite!</p>
-									<p>Your choice - mild or spicy slaw</p>
-									<p>Served with garlic mashers</p>
-									<p>$10.95</p>
-								</td>
+								<td scope="row">Root Beer</td>
+								<td><strong>$3.00</strong></td>
 							</tr>
-						</tbody>
-							
-						<thead>
 							<tr>
-								<th>Tenderloin Sandwich and Chips</th>
-								<th>House Salad</th>
-								<th>Brisket Sandwich and Fries</th>
-							<tr>
-						</thead>
-						
-						<tbody>
-							<tr>
-								<td>	
-									<p>Really Hits The Spot!</p>
-									<p>Plain or Sesame Seed Bun</p>
-									<p>Pickle, onion, tomato, and lettuce</p>
-									<p>Served with our house-made chips</p>
-									<p>$8.95</p>
-								</td>
-								
-								<td>
-									<p>On the Lighter Side</p>
-									<p>Your choice - with or without cheese</p>
-									<p>Iceberg lettuce, tomatoes, peppers</p>
-									<p>Thousand Island or Ranch dressing<p>
-									<p>Served with a dinner roll</p>
-									<p>$6.95</p>
-								</td>
-								
-								<td>
-									<p>A Taste of Texas!</p>
-									<p>Smoked Brisket on thick-cut Texas Toast</p>
-									<p>Cole Slaw</p>
-									<p>Served with our famous thick-cut french fries</p>
-									<p>$7.95</p>
-								</td>								
+								<td scope="row">Bottled Water</td>
+								<td><strong>$1.25</strong></td>
 							</tr>
+							<tr>
+								<td scope="row">Lemonade</td>
+								<td><strong>$1.00</strong></td>
+							</tr>
+							<tr>
+								<td scope="row">Iced Tea</td>
+								<td><strong>$1.25</strong></td>
+							</tr>
+					
 						</tbody>
-							
-						</table>	
-					</article>		
-					
-					<article>
-						<table class="beverage">
-							<thead>
-								<tr>
-									<th>Beverages</th>
-								</tr>
-							</thead>
-							
-							<tbody>
-								<tr>
-									<td>Root Beer</td>
-									<td>$3.00</td>	
-								</tr>
-								
-								<tr>
-									<td>Bottled Water</td>
-									<td>$1.25</td>
-								</tr>
-								
-								<tr>
-									<td>Lemonade</td>
-									<td>$1.00</td>
-								</tr>
-								
-								<tr>
-									<td>Iced Tea</td>
-									<td>$1.25</td>
-								</tr>
-							
-							</tbody>
-						</table>
-					
-					</article>
-
-			</section>	
+					</table>
+				</div>
+			</div>
+		</div>	
 			
+			<div class="container-fluid">
+				<footer>
+					<p>4870 Ashcraft Court, San Diego, CA 92103</p>
+					<p>(619) 360-0587</p>
+				</footer>
+			</div>
 			
-			<footer>
-				<p>4870 Ashcraft Court, San Diego, CA 92103</p>
-				<p>(619) 360-0587</p>
-			</footer>
-			
+		<!--JavaScript scripts-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/JavaScript" src="Scripts/scripts.js"></script>
 		</body>
 <html>	

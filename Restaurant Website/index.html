@@ -2,58 +2,143 @@
 <!--
 	Name: Cody Czora
 	Date Created: 1/23/2019
-	Most recent revision: 1/25/2019
+	Most recent revision: 2/3/2019
 -->
 <html lang="en">
 	<head>
-		<title>Home Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
 		<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" type="text/css" />
 		
+		<!--substituted Font Awesome in place of Glyphicons since they were dropped in bootstrap 4-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		
+		<title>Home Page</title>
+		
 		<style>
-			.content {
-				background-color: #ddbca6;
-			}
-			
 			.content p {
 				width: 50%;
 				text-align: justify;
 				margin: auto;
 				padding-top: 10px;
 				padding-bottom: 10px;
+			}
+			
+			.content img {
+				width:100%;
+				height:auto;
+			}
 		</style
 	</head>
 
 		<body>
-			<header>
-				<h1>Pica's Place<h1>
-			</header>
-			
-
-			<nav>
-			<div class="clearfix">
-				<p><a href="index.html">Home</a></p>
-				<p><a href="menu.html">Menu</a></p>	
-				<p><a href="contact.html">Contact Us</a></p>
+			<div class = "container-fluid">
+				<header>
+					<h1>Pica's Place<h1>
+				</header>
 			</div>
+			
+			<noscript>
+				<p style="color:blue;">Your web browser has JavaScript disabled or does not support JavaScript.
+				Our site is best viewed with JavaScript enabled.
+				</p>
+			</noscript>
+			
+			<nav class="nav nav-pills m nav-fill">
+			
+				<a class="nav-item nav-link" href="index.html"><i class="fas fa-home"></i></a>
+					
+				<a class="nav-item nav-link" href="menu.html">Menu</a>
+					
+				<a class="nav-item nav-link" href="contact.html">Contact Us</a>
+
 			</nav>
-
-			<div class="content">
-			<img src="Images/salmon.jpg" alt="Plate with salmon filet and salad" style="display:block; margin-left:auto; margin-right:auto; width: 50%;" />
 			
-			<p>Restaurant Description</p>
-			<p>Welcome to the best Mom and pop restaurant in the Bay Area! <br />
-			Pica's Place has been proudly owned and operated by the Swain family since 1972,
-			and we take pride in supplying savory flavors to all our welcomed guests!
-			We offer juicy burgers, smoked brisket, and southern style dishes.
-			All our dishes are served with the best sauces and sides, available,
-			including our famous thick-cut French fries!</p>
+			<div class="container-fluid">
+				<div class="page-header">
+					<h2>New Year, New Location</h2>
+					<h5>Carlsbad location opening Summer 2019!</h5>
+				</div>
 			</div>
 			
-			<footer>
-				<p>4870 Ashcraft Court, San Diego, CA 92103</p>
-				<p>(619) 360-0587</p>
-			</footer>
+			<div class="container-fluid">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+					<div class="parent d-flex justify-content-center">
+						<img class="first-slide img-fluid" src="Images/bar.jpg" alt="Bar Interior">
+						<div class="carousel-caption">
+							<h3>New Location</h3>
+							<p>Opening July 1st, 2019 at the Carlsbad beachfront!</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="second-slide img-fluid" src="Images/menu-slate.jpg" alt="Chalkboard">
+						<div class="carousel-caption">
+							<h3>Spring Specials</h3>
+							<p>Our menu has been updated to reflect the season</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="carousel-item">
+					<div class="parent d-flex justify-content-center">
+						<img class="third-slide img-fluid" src="Images/beer.jpg" alt="Beer">
+						<div class="carousel-caption">
+							<h3>On Tap</h3>
+							<p>Our Beer of the Month is SG Special Brew</p>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+				
+
+		<div class="container-fluid">
+
+		</div>		
+		<div class="text-center">
+			<div class="container-fluid">
+				<img class="rounded img-fluid" src="Images/salmon.jpg" alt="Plate with salmon filet and salad" style="display:block; margin:0 auto; width: 50%; margin-top:20px;margin-bottom:20px;" />
+			</div>
 			
+			<div class="container-fluid">
+				<h4>Welcome to the best American restaurant in the Bay Area!</h4>
+				<p>Pica's Place has been proudly owned and operated by the Swain family since 1972,
+				and we take pride in supplying savory flavors to all our welcomed guests!
+				We offer juicy burgers, smoked brisket, and southern style dishes.
+				All our dishes are served with the best sauces and sides, available,
+				including our famous thick-cut French fries!</p>
+			</div>
+
+			<div class="container-fluid">
+				<footer>
+					<p>4870 Ashcraft Court, San Diego, CA 92103</p>
+					<p>(619) 360-0587</p>
+				</footer>
+			</div>
+		</div>
+		<!--JavaScript scripts-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/JavaScript" src="Scripts/scripts.js"></script>
 		</body>
 <html>	

@@ -1,34 +1,30 @@
 /*
 	Name: Cody Czora
 	Date Created: 1/24/2019
-	Most recent revision: 1/28/2019
+	Most recent revision: 2/3/2019
 */
-
-.clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
-}
 
 header, footer {
 	background-color: #af1b3f;
 	color: #efe4d7;
-	height: 100px;
+	height: 150px;
 	font-family: "Merienda", cursive;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	text-align: center;
 	margin: 2px auto;
 	padding: 30px 10px 30px 10px;
 }
 
+h1,h2,h3,h4,h5 {
+	font-family: "Merienda", cursive;
+}
+
 nav {
 	border-top: solid 3px #14090b;
 	border-bottom: solid 3px #14090b;
-	margin: 20px 20px;
-	padding-bottom: 20px;
 }
 
-nav a:link {
+.nav-link {
 	background-color: #af1b3f;
 	color: #efe4d7;
 	padding: 8px;
@@ -41,14 +37,6 @@ nav a:link {
 	float: left;
 }
 
-body {
-	font-family: "Catamaran", sans-serif;
-	font-color: #14090b;
-	max-width: 1000px;
-	margin: 0 auto;
-	background-color: #efe4d7;
-}
-
 nav a:hover {
 	background-color: white;
 	color: #af1b3f;
@@ -59,10 +47,43 @@ nav a:active {
 	text-decoration: none;
 	font-weight: normal;
 }
+/* centering images within carousel */
+.parent {
+	min-height:300px;
+	}
 
-nav a:visited {
-	font-color: hotpink;
-	
+/* Making the carousel responsive */
+@media (max-width: 992px) {
+	.item {
+		height: 250px;
+	}
 }
 
-	
+@media (max-width: 768px) {
+	.item {
+		height: 200px;
+	}
+
+}
+
+@media (max-width: 544px) {
+	.carousel-caption h3, .carousel-caption p{
+		font-size: 130%;
+	}
+}
+
+body {
+	font-family: "Catamaran", sans-serif;
+	font-color: #14090b;
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: #efe4d7;
+}
+
+.item {
+	max-height: 250px;
+}
+
+.imgItem {
+	min-height: 200px;	
+}
